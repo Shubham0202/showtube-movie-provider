@@ -1,0 +1,84 @@
+.ac-common {
+  display: block;
+  max-width: 100vw;
+  width: 100vw;
+  background: rgba(255, 0, 0, 0.7529411765);
+  color: white;
+  transition: all 1s ease;
+  margin-bottom: 0.3em;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ac-sucess {
+  background: green;
+}
+
+.ac-empty {
+  margin-top: 2.5em;
+}
+
+.close-error {
+  cursor: pointer;
+  padding: 0.5em;
+}
+.close-error .cross {
+  width: 23px;
+  height: 23px;
+}
+
+.menu-list {
+  height: 92vh;
+}
+
+.movie-request {
+  background-color: transparent;
+}
+
+.lg-body {
+  background: #ffffff;
+}
+
+.or-line {
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+.or-line::before {
+  content: "";
+  display: block;
+  border: 1px solid black;
+}
+
+.other-methods {
+  margin: 1em 0;
+}
+
+.sign-lg {
+  background: #000000;
+  margin-bottom: 1em;
+}
+
+.with-google {
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  text-decoration: none;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin: 0.5em 0;
+  font-size: 15px;
+  padding: 0.5em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgba(0, 0, 0, 0.7725490196);
+}
+.with-google img {
+  width: 30px;
+}
+.with-google:hover {
+  transform: scale(0.95);
+  transition: transform 500ms ease;
+}/*# sourceMappingURL=signup.css.map */
