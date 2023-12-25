@@ -1,0 +1,69 @@
+$img-max-width:100px;
+$grid-second-phase-width: calc(87vw - $img-max-width);
+
+//colors
+$features-options-bg: #ffdd7552;
+$features-options-color: #ec4441;
+$dwn-btn-bg: rgb(243, 83, 8);
+.container {
+    max-height: 83vh;
+  }
+.app-container{
+    max-width: 95vw;
+    display: grid;
+    gap: .5em;
+    grid-template-columns:$img-max-width $grid-second-phase-width;
+}
+.app-title{
+    font-size: 15px;
+    margin: 0;
+    margin-bottom: .2em;
+    text-transform: capitalize;
+}
+.app-size{
+    font-size: 14px;
+}
+.app-img{
+    max-width: $img-max-width;
+    width: 100vw;
+    height: 131px;
+    
+    & img{
+        object-fit: cover;
+        max-width: 100px;
+        width: 100vw;
+        height: 100%;
+        border-radius: 4px;
+    }
+}
+.app-features{
+    max-width: 95vw;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: .4em;
+    transition: all 700ms ease;
+    & .features{
+        background: $features-options-bg;
+        color: $features-options-color;
+        padding: .3em .8em .3em 0;
+        border-radius: 4px;
+        text-transform: capitalize;
+    }
+    &:hover{
+        height: max-content;
+    }
+}
+.dwn-btn-apk{
+    margin-top: .5em;
+    & a{
+        text-decoration: none;
+    }
+}
+.apk-dwn{
+    display: block;
+    max-width: calc(87vw - $img-max-width);
+    width: 300px;
+    border: none;
+    background: $dwn-btn-bg;
+}

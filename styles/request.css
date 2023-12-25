@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fr-container {
+  margin: 0;
+}
+
+.movie-request {
+  display: grid;
+  place-items: center;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  height: 85vh;
+  background: linear-gradient(to right, deepskyblue, blueviolet);
+}
+
+.form-style {
+  background: linear-gradient(to left, rgba(245, 245, 245, 0.5843137255), #ebeaea, rgba(245, 245, 245, 0.768627451));
+  border-radius: 6px;
+  padding: 1em;
+  box-shadow: 2px 2px 12px;
+  width: 300px;
+  max-width: 90vw;
+}
+
+.upper-title {
+  text-align: center;
+}
+.upper-title .form-title {
+  text-transform: capitalize;
+  color: rgba(17, 16, 16, 0.943);
+}
+
+.inp-parent {
+  margin: 1em 0;
+}
+
+.inp-adjust, #txtarea {
+  padding: 0.89em 1em;
+  border-radius: 100vmax;
+  background: white;
+  max-width: 100vw;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+#txtarea {
+  resize: none;
+  border-radius: 10px;
+}
+
+.inp-adjust:focus-within, #txtarea:focus-within {
+  outline: 2px solid deepskyblue;
+  box-shadow: 2px 4px 15px deepskyblue;
+  transition: all 560ms ease;
+}
+
+#source-option {
+  width: 100%;
+  padding: 0.7em;
+  border-radius: 100vmax;
+  background: white;
+  outline: none;
+  border: none;
+}
+
+.s-btn {
+  max-width: 100vw;
+  width: 100%;
+  padding: 0.8em 1em;
+  background: rgba(255, 42, 0, 0.656);
+  border: none;
+  border-radius: 100vmax;
+  color: white;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.s-btn:focus-within {
+  background-color: black;
+  transform: scale(0.95);
+}/*# sourceMappingURL=request.css.map */

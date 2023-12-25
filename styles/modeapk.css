@@ -1,0 +1,70 @@
+.container {
+  max-height: 83vh;
+}
+
+.app-container {
+  max-width: 95vw;
+  display: grid;
+  gap: 0.5em;
+  grid-template-columns: 100px calc(87vw - 100px);
+}
+
+.app-title {
+  font-size: 15px;
+  margin: 0;
+  margin-bottom: 0.2em;
+  text-transform: capitalize;
+}
+
+.app-size {
+  font-size: 14px;
+}
+
+.app-img {
+  max-width: 100px;
+  width: 100vw;
+  height: 131px;
+}
+.app-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100px;
+  width: 100vw;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.app-features {
+  max-width: 95vw;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 0.4em;
+  transition: all 700ms ease;
+}
+.app-features .features {
+  background: rgba(255, 221, 117, 0.3215686275);
+  color: #ec4441;
+  padding: 0.3em 0.8em 0.3em 0;
+  border-radius: 4px;
+  text-transform: capitalize;
+}
+.app-features:hover {
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.dwn-btn-apk {
+  margin-top: 0.5em;
+}
+.dwn-btn-apk a {
+  text-decoration: none;
+}
+
+.apk-dwn {
+  display: block;
+  max-width: calc(87vw - 100px);
+  width: 300px;
+  border: none;
+  background: rgb(243, 83, 8);
+}/*# sourceMappingURL=modeapk.css.map */

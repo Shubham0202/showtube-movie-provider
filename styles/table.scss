@@ -1,0 +1,49 @@
+.table{
+    border:2px solid;
+    border-collapse:collapse;
+    color: #0b97ba;
+}
+.tHead{
+    background: rgb(38, 173, 235);
+    color: white;
+}
+th,td,tr{
+    border:2px solid grey;
+    text-align:center;
+    
+}
+.title{
+    text-align: left;
+    padding-left: .2em;
+}
+img{
+    width:50px;
+    height:50px
+}
+
+.add-more{
+    padding: .5em .9em;
+    border: none;
+    background: rgb(0, 128, 255);
+    color: white;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.table-container{
+    display: grid;
+    place-items: center;
+}
+.btn-common{
+    padding: .5em .9em;
+    border: none;
+    background: rgb(0, 128, 255);
+    border-radius: 3px;
+    font-weight: bold;
+    // display: block;
+    cursor: pointer;
+    color: white;
+}
+.del-btn{
+    margin-top: 1em;
+    background: red;
+}
