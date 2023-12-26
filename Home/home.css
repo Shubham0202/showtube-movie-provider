@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  background-blend-mode: color-burn;
+  -webkit-backdrop-filter: blur(100px);
+          backdrop-filter: blur(100px);
+}
+
+header {
+  background: rgba(255, 255, 255, 0.431372549);
+  position: sticky;
+  top: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  box-sizing: 2px 2px 2px;
+  position: relative;
+  z-index: 100;
+}
+.navbar .logo {
+  margin-left: 0.5em;
+  background: linear-gradient(to right, orange, violet);
+  font-weight: bold;
+  font-size: 17px;
+  background-size: cover;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
+.hammer {
+  padding: 1.5em 1em;
+  cursor: pointer;
+}
+.hammer .h {
+  height: 4px;
+  background: rgba(247, 130, 80, 0.8705882353);
+  width: 25px;
+  border-radius: 100vmax;
+}
+.hammer .h::after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: rgba(247, 130, 80, 0.8705882353);
+  width: var(--ham-after, 30px);
+  border-radius: 100vmax;
+  position: relative;
+  bottom: 11px;
+  transition: width 500ms ease;
+}
+.hammer .h::before {
+  content: "";
+  display: block;
+  height: 4px;
+  background: rgba(247, 130, 80, 0.8705882353);
+  width: var(--ham-before, 20px);
+  border-radius: 100vmax;
+  position: relative;
+  top: 7px;
+  transition: width 500ms ease;
+}
+
+.nav-list {
+  background: linear-gradient(to right, #f5f5f5, rgba(245, 245, 245, 0.9098039216));
+  list-style: none;
+  position: absolute;
+  width: 100vw;
+  top: -300px;
+  transition: top 800ms ease;
+  padding: 1em 0;
+  z-index: 99;
+}
+.nav-list li a {
+  display: block;
+  padding: 0.7em 0.5em;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: blueviolet;
+  font-weight: 600;
+  font-family: "Times New Roman", Times, serif;
+}
+.nav-list li a:hover {
+  background: rgba(155, 155, 155, 0.2078431373);
+}
+
+.active-nav-list {
+  top: 52px;
+  transition: top 600ms ease;
+}
+
+.main {
+  background: rgba(245, 245, 245, 0.1215686275);
+  height: calc(96dvh - 1.5em);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  margin: 1em;
+  overflow: hidden;
+}
+
+.content-title {
+  font-size: 30px;
+  text-transform: capitalize;
+  margin-bottom: 0.5em;
+  font-weight: 550;
+  background: linear-gradient(to left, blueviolet, deepskyblue);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
+.content-title2 {
+  font-size: 20px;
+  text-transform: capitalize;
+  background: linear-gradient(red, blueviolet);
+  color: rgba(0, 0, 0, 0.8156862745);
+  -webkit-background-clip: text;
+          background-clip: text;
+  overflow: hidden;
+  font-weight: 600;
+  font-family: system -ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.typewritter {
+  display: flex;
+  align-items: center;
+}
+
+.c-gradient {
+  background: linear-gradient(to right, deepskyblue, blueviolet);
+  font-weight: bold;
+  font-size: 20px;
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  animation: change-gradient 4s ease infinite;
+  position: relative;
+  padding: 0.2em 0;
+  z-index: -1;
+}
+.c-gradient::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: white;
+  overflow: hidden;
+  height: 100%;
+  border-left: 2px solid #ba2be2;
+  animation: blinkSpan 3s steps(10) infinite;
+  z-index: 1;
+}
+
+.content-btn {
+  margin-top: 2em;
+}
+
+.install-btn {
+  position: relative;
+  z-index: -1;
+  padding: 0.8em 2em;
+  color: whitesmoke;
+  font-weight: bold;
+  border: none;
+  background: #ba2be2;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px blueviolet;
+  animation: bounceBtn 4s ease-in infinite;
+}
+
+@keyframes bounceBtn {
+  0% {
+    transform: scale(0.95);
+  }
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes blinkSpan {
+  100% {
+    left: 100%;
+    margin: 0 -10px 0 13px;
+  }
+}
+@keyframes slider {
+  100% {
+    top: -360px;
+  }
+}
+@keyframes change-gradient {
+  30% {
+    background: linear-gradient(to right, blueviolet, #ff0831);
+    color: transparent;
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
+  60% {
+    background: linear-gradient(to left, #ff0800, #2b53e2);
+    color: transparent;
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
+  100% {
+    background: linear-gradient(#df4ec8, rgba(61, 10, 189, 0.7607843137));
+    color: transparent;
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
+}
+.content-img {
+  max-width: calc(100vw - 40px);
+  width: 450px;
+}
+.content-img .aigen {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.robo-text {
+  margin: 1em;
+  font-size: 22px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.robo-text .intro {
+  margin: 0.1em 0;
+}
+.robo-text .intro .intro-underline {
+  text-decoration: underline;
+}
+.robo-text .intro .intro-underline .Zero {
+  background: linear-gradient(deepskyblue, blueviolet);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
+.adjust-grad-size {
+  font-size: 22px;
+  color: blueviolet;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.footer {
+  padding: 1em;
+  background: #252728;
+  color: #f5f5f5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .content-title {
+    font-size: 20px;
+  }
+  .content-title2 {
+    font-size: 18px;
+  }
+  .content-img {
+    margin-top: 1em;
+  }
+  .robo-text {
+    font-size: 16px;
+  }
+  .adjust-grad-size {
+    font-size: 17px;
+  }
+}/*# sourceMappingURL=home.css.map */
