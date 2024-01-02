@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.serv-title{
+    text-align: center;
+    margin: 1em 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+.selected-server{
+    margin: 1em;
+
+}
+#servers{
+    max-width: 100vw;
+    width: 100vw;
+    padding: .7em .3em;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 1em;
+    background: linear-gradient(to left,#ff00cc,#4800ff,#e30b61,#ff0000);
+    color: white;
+    border: none;
+    border-radius: 7px;
+}
+.server-op{
+    color: black;
+    text-transform: capitalize;
+}
+.change-server-btn{
+    padding: .5em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to left,blue,#a200ff);
+    color: white;
+}
