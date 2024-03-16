@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
+@mixin mg-pd()
+{
+  padding: .5em;
+  margin: .5em;
+}
+$borderBg: #f8d31a;
+$element-hover: deepskyblue;
+$secondary-blk: #0a0a0aee;
+$primary-blk: #000000;
+.fcap {
+  text-transform: capitalize;
+}
+.srch-logo {
+  font-size: 36px;
+}
+
+//give the height of main container
+$header-height: 119px;
+.main-container{
+    // this done because if we dont give the hieght to the container the navigation menu and search bar behaviour is annoying. 
+    //thats why we can give the height to the container 
+    height: calc(100vh - $header-height);
+    overflow-y: scroll;
+
+}
+body {
+  background-color: #f5f5f5;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.identity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    background: white;
+}
+.web-title{
+    font-size: 19px;
+    color: orange;
+    & .fst-letter{
+        font-family: 'Caveat', cursive;
+        color: orangered;
+    }
+    & .mdl-letter{
+        font-family: 'Play', sans-serif;
+    }
+}
+.logoV2 {
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  background-position: center;
+  object-fit: cover;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0px 0px 2px black;
+  padding: 0 1em;
+}
+.hammer {
+  // border: 2px solid green;
+  // cursor: pointer;
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  z-index: 100;
+  & .h {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: black;
+    margin-top: 4px;
+    border-radius: 100vmax;
+    transition: all 200ms ease;
+  }
+  & .h1 {
+    width: 30px;
+    top: 12px;
+  }
+
+  & .h3 {
+    width: 30px;
+    top: 30px;
+  }
+  & .ac-h1 {
+    width: 100% !important;
+  }
+  & .ac-h2 {
+    width: 30px !important;
+  }
+  & .ac-h3 {
+    width: 100% !important;
+  }
+}
+//Note: if it is not work then get h1,h2,h3 css elements outside of the hammer element.
+.active-h1 {
+  width: 100%;
+}
+.active-h2 {
+  width: 30px;
+}
+.active-h3 {
+  width: 100%;
+}
+//nav-options
+
+$nav-fix-size: 270px;
+.nav-options {
+  max-width: 100vw;
+  display: grid;
+  grid-template-columns: $nav-fix-size 2000px;
+  position: absolute;
+  top: -100%;
+  z-index: 99;
+  transition: all 10ms ease;
+  overflow: hidden;
+}
+.active-nav {
+  top: 125px;
+}
+.ul-list {
+  background: #f5f5f5f3;
+  // background: green;
+  list-style: none;
+  position: relative;
+  width: $nav-fix-size;
+  height: calc(100vh - 100px);
+  & a {
+    text-align: center;
+    display: block;
+    padding: 0.6em 1em;
+    margin-bottom: 0.2em;
+    color: black;
+    // background: rgb(158, 158, 158);
+    // color: #f5f5f5;
+    // mix-blend-mode: color-burn;
+    border-bottom: 2px double;
+    text-decoration: none;
+    transition: all 300ms ease;
+    width: 100%;
+    &:hover {
+      text-decoration: underline;
+      transform: scale(0.95);
+    }
+  }
+}
+.close-ul-list {
+  position: relative;
+  width: calc(100% - $nav-fix-size);
+  background: #ffffff47;
+  // background: yellow;
+}
+
+//Template
+.take-input {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  width: 100vw;
+  top: -100%;
+  transition: top 50ms ease;
+  z-index: 2;
+}
+.active-take-input {
+  top: 62px !important;
+  top: 128px !important;
+}
+#srchmv {
+  max-width: 99vw;
+  width: 100%;
+  padding: 0.4em 0.5em;
+  font-size: 17px;
+  border-radius: 5px;
+  border: 2px solid grey;
+  outline: none;
+  text-transform: capitalize;
+  transition: all 300ms ease;
+  &:focus-within {
+    border: 2px solid black;
+  }
+}
+.highlight {
+  background: #7bff00;
+  padding: 0.2em;
+  border-radius: 4px;
+}
+// movie container
+.mv-web-label{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include mg-pd();
+}
+.show-all{
+  text-decoration: none;
+  padding: .5em 1em;
+  background: #0a0a0aee;
+  color: white;
+  // color: black;
+  border-radius: 4px;
+  transition: transform 100ms ease;
+  & i{
+    font-size: 18px;
+  }
+  &:hover{
+    transform: scale(.90);
+  }
+}
+.mv-container {
+  margin: 0 1em;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.redirect-link {
+  display: block;
+  width: max-content;
+}
+.content {
+  margin-top: 1em;
+  position: relative;
+  width: 200px;
+  height: 250px;
+  border: 4px solid black;
+  border-radius: 5px;
+  &:hover {
+    // border: 4px solid rgb(30, 207, 235);
+    // background: linear-gradient(to right,blueviolet,rgb(0, 102, 255));
+    box-shadow: 0px 0px 4px orchid;
+  }
+  & .content-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+    transition: all 400ms ease;
+    &:hover {
+      transform: scale(0.9);
+      border-radius: 4px;
+      box-shadow: 0px 0px 2px;
+    }
+  }
+  & .content-lang {
+    background: #0d0d0de4;
+    color: whitesmoke;
+    padding: 0.1em 0.7em;
+    border-radius: 3px;
+    position: absolute;
+    right: 2px;
+    top: 0;
+    box-shadow: 0px 0px 2px grey;
+  }
+}
+.title-container {
+  background-blend-mode: color-burn;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: #161515a9;
+  & .content-title {
+    color: whitesmoke;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+}
+.load-more{
+    display: grid;
+    place-items: center;
+    margin: 1em;
+}
+.load-btn{
+    cursor: pointer;
+    padding: .8em 1em;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    background: black;
+}
+
+// features 
+
+.features{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3,1fr);
+    padding: .3em;
+    box-shadow: 0 0 2px grey;
+    position: sticky;
+    bottom: 0;
+    background: white;
+    z-index: 2;
+    & .f-items{
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        width: 100%;
+        // color: black;
+        // border: 2px solid;
+        &:hover{
+          background: rgb(222, 221, 221);
+          border-radius: 5px;
+        }
+    }
+    & .common-item{
+        font-size: 35px;
+        color: black;
+    }
+}
+//media query template
+
+@media screen and (max-width: 600px) {
+  .mv-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  .redirect-link{
+    cursor: default;
+  }
+  .content {
+    width: 155px;
+    height: 230px;
+  }
+  .features{
+    & .f-items{
+      cursor: default;
+    }
+  }
+}
