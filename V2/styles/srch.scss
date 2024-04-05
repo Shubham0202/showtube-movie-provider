@@ -1,0 +1,131 @@
+.back-to-page {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.2em 1em;
+  box-shadow: 0 0 2px grey;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  & i {
+    cursor: pointer;
+    font-size: 35px;
+  }
+  & .bck-btn{
+    font-size: 40px;
+
+  }
+}
+.take-input2 {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  width: 100vw;
+  top: -100%;
+  transition: top 50ms ease;
+  z-index: 2;
+}
+.active-take-input2 {
+  top: 66px !important;
+}
+.srch-title {
+  margin: 1em;
+}
+
+.srch-arrangement {
+  place-items: flex-start;
+}
+
+//mvDetails page css
+.mv-data {
+  margin: 1em;
+}
+.center-img-div {
+  display: grid;
+  place-items: center;
+}
+.mv-img {
+  max-width: 99vw;
+  width: 300px;
+  height: 250px;
+  border: 2px solid;
+  border-radius: 5px;
+  background: linear-gradient(rgb(255, 255, 255),whitesmoke);
+  position: relative;
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+ 
+}
+.antina{
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    width: 50px;
+    height: 50px;
+    transform: rotate(320deg);
+}
+.steper{
+    width: 50px;
+    height: 35px;
+    border: 2px solid;
+    border-top: none;
+    border-bottom: none;
+}
+.stand{
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    border: 2px solid;
+    border-radius: 3px;
+}
+.common-mv-css {
+  margin: 0.5em 0;
+  background: white;
+  box-shadow: 0 0 1px #d1caca;
+  padding: 1em;
+  border-radius: 4px;
+}
+.down-title{
+    padding: .5em 1em;
+    border-radius: 3px;
+    background: black;
+    color: white;
+    width: fit-content;
+    // margin: .5em 0;
+}
+.download-table,tr,td,th{
+    border: 2px solid;
+    border-collapse: collapse;
+    text-align: center;
+}
+.bottom-border{
+    border-bottom: 2px solid white;
+}
+.mv-download{
+    display: block;
+    font-size: 20px;
+    color: white;
+    background: black;
+    padding: .2em 1em;
+    &:hover{
+        background: green;
+    }
+}
+.pd-1{
+    padding: .5em;
+}
+.pd-50{
+    max-width: 99vw;
+    width: 90vw;
+    padding: .5em;
+}
+@media screen and (max-width: 412px) {
+  .back-to-page{
+    & i{
+      cursor: default;
+    }
+  }
+}
