@@ -3,7 +3,7 @@
 This project is a web-based movie provider system developed using HTML, Tailwind CSS, JavaScript, PHP, and MySQL. It allows users to browse available movies, watch trailers, and rent or purchase movies to stream online.
 
 ## Live Demo
-- `https://freemovie.showtube.live/`
+- https://freemovie.showtube.live/
 ## Features
 
 - **Movie Listings**: Browse available movies with details such as title, genre, release year, and Download Link.
