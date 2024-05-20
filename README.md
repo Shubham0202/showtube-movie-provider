@@ -14,20 +14,21 @@ This project is a web-based movie provider system developed using HTML, Tailwind
 
 1. **Clone the repository**:
 git clone https://github.com/Shubham0202/showtube-movie-provider
+make sure you are cloning this reso in `XAMPP/hdocs` folder 
 
-2. **Import the Database**:
+3. **Import the Database**:
 
    - Create a MySQL database and import the `movieapp.sql` file located in the `database` directory.
 
-3. **Configure Database Connection**:
+4. **Configure Database Connection**:
 
    - Update the `connect.php` file located in the `root` directory with your database credentials.
 
-4. **Start the Server**:
+5. **Start the Server**:
 
    - Start a PHP server (e.g., using XAMPP).
 
-5. **Access the Application**:
+6. **Access the Application**:
 
    - Open a web browser and navigate to `http://localhost/movie-provider`.
 
