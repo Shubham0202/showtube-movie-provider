@@ -14,7 +14,7 @@ This project is a web-based movie provider system developed using HTML, Tailwind
 
 1. **Clone the repository**:
 git clone https://github.com/Shubham0202/showtube-movie-provider
-make sure you are cloning this reso in `XAMPP/hdocs` folder 
+make sure you are cloning this reso in `XAMPP/htdocs` folder 
 
 3. **Import the Database**:
 
